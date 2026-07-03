@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart City 2026 Docs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-900 text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-teal-500 selection:text-white">
+
+    <div class="flex h-screen overflow-hidden">
+        
+        <!-- Sidebar -->
+        <aside class="w-80 bg-slate-900/80 backdrop-blur-xl border-r border-slate-700/50 hidden md:flex flex-col h-full shadow-2xl relative z-10">
+            <div class="h-24 flex items-center px-8 border-b border-slate-800">
+                <h1 class="text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-emerald-400 tracking-wider">SMART CITY<br/><span class="text-xs tracking-[0.3em] text-slate-400">2026 DOCS</span></h1>
+            </div>
+            
+            <nav id="sidebar-nav" class="flex-1 overflow-y-auto p-4 custom-scrollbar">
+                <!-- Links injected by TS -->
+            </nav>
+
+            <div class="p-6 border-t border-slate-800">
+                <button id="download-zip" class="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-400 hover:to-emerald-400 text-slate-900 font-bold py-3 px-4 rounded-xl shadow-lg shadow-teal-500/20 transition-all transform hover:scale-[1.02] active:scale-[0.98]">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                    Download ZIP
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 h-full overflow-y-auto relative custom-scrollbar bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjMGYxNzJhIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjMWUzYThhIiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')]">
+            <!-- Glass Overlay for Background -->
+            <div class="absolute inset-0 bg-slate-900/90 pointer-events-none fixed"></div>
+            
+            <div class="relative z-10 px-8 py-12 md:px-16 lg:px-24 max-w-5xl mx-auto" id="main-content">
+                <!-- Sections injected by TS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Compile TS Script -->
+    <script src="main.js"></script>
+</body>
+</html>
