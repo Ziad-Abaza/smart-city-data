@@ -29,6 +29,30 @@ body {
     background: rgba(45, 212, 191, 0.6); 
 }
 
+/* Animations & Dynamic UI */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-bg {
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a, #020617);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 /* Enhancing Tailwind Typography for Dark Mode */
 .prose h1, .prose h2, .prose h3, .prose h4 {
     color: #f1f5f9 !important;

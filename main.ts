@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Content section
         const sectionEl = document.createElement('section');
         sectionEl.id = sec.id;
-        sectionEl.className = 'mb-16 pt-8 scroll-mt-20';
+        sectionEl.className = 'mb-20 pt-8 scroll-mt-20 fade-up';
         
         const titleEl = document.createElement('h1');
         titleEl.className = 'text-4xl font-extrabold mb-6 text-teal-400 tracking-tight';
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionEl.appendChild(titleEl);
 
         const bodyEl = document.createElement('div');
-        bodyEl.className = 'prose prose-invert prose-slate max-w-none prose-a:text-emerald-400 prose-headings:text-slate-100 prose-strong:text-slate-200 glass-panel p-8 rounded-2xl shadow-xl';
+        bodyEl.className = 'prose prose-invert prose-slate max-w-none prose-a:text-emerald-400 prose-headings:text-slate-100 prose-strong:text-slate-200 glass-panel p-8 md:p-12 rounded-3xl shadow-2xl relative group hover:shadow-teal-500/10 transition-shadow duration-500';
         bodyEl.innerHTML = marked.parse(sec.content);
         sectionEl.appendChild(bodyEl);
 
@@ -43,18 +43,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-link');
 
     const observerOptions = {
-        root: null,
+        root: document.getElementById('scroll-area'),
         rootMargin: '0px',
-        threshold: 0.3
+        threshold: 0.05
     };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
                 navLinks.forEach(link => {
-                    link.classList.remove('bg-slate-800', 'text-teal-400');
+                    link.classList.remove('bg-slate-800', 'text-teal-400', 'translate-x-2');
                     if (link.getAttribute('href') === '#' + entry.target.id) {
-                        link.classList.add('bg-slate-800', 'text-teal-400');
+                        link.classList.add('bg-slate-800', 'text-teal-400', 'translate-x-2');
                     }
                 });
             }
@@ -63,6 +64,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(sec => observer.observe(sec));
 
+    // Fallback visibility trigger
+    setTimeout(() => {
+        sections.forEach(sec => sec.classList.add('visible'));
+    }, 800);
+
     // Smooth scroll for nav links
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -70,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = link.getAttribute('href').substring(1);
             const targetEl = document.getElementById(targetId);
             if(targetEl) {
-                window.scrollTo({
+                const scrollArea = document.getElementById('scroll-area');
+                scrollArea.scrollTo({
                     top: targetEl.offsetTop - 80,
                     behavior: 'smooth'
                 });

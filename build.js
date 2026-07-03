@@ -57,14 +57,14 @@ const tsCode = "// @ts-nocheck\n" +
 "        // Content section\n" +
 "        const sectionEl = document.createElement('section');\n" +
 "        sectionEl.id = sec.id;\n" +
-"        sectionEl.className = 'mb-16 pt-8 scroll-mt-20';\n" +
+"        sectionEl.className = 'mb-20 pt-8 scroll-mt-20 fade-up';\n" +
 "        \n" +
 "        const titleEl = document.createElement('h1');\n" +
 "        titleEl.className = 'text-4xl font-extrabold mb-6 text-teal-400 tracking-tight';\n" +
 "        titleEl.textContent = sec.title;\n" +
 "        sectionEl.appendChild(titleEl);\n\n" +
 "        const bodyEl = document.createElement('div');\n" +
-"        bodyEl.className = 'prose prose-invert prose-slate max-w-none prose-a:text-emerald-400 prose-headings:text-slate-100 prose-strong:text-slate-200 glass-panel p-8 rounded-2xl shadow-xl';\n" +
+"        bodyEl.className = 'prose prose-invert prose-slate max-w-none prose-a:text-emerald-400 prose-headings:text-slate-100 prose-strong:text-slate-200 glass-panel p-8 md:p-12 rounded-3xl shadow-2xl relative group hover:shadow-teal-500/10 transition-shadow duration-500';\n" +
 "        bodyEl.innerHTML = marked.parse(sec.content);\n" +
 "        sectionEl.appendChild(bodyEl);\n\n" +
 "        contentDiv.appendChild(sectionEl);\n" +
@@ -73,23 +73,28 @@ const tsCode = "// @ts-nocheck\n" +
 "    const sections = document.querySelectorAll('section');\n" +
 "    const navLinks = document.querySelectorAll('.nav-link');\n\n" +
 "    const observerOptions = {\n" +
-"        root: null,\n" +
+"        root: document.getElementById('scroll-area'),\n" +
 "        rootMargin: '0px',\n" +
-"        threshold: 0.3\n" +
+"        threshold: 0.05\n" +
 "    };\n\n" +
 "    const observer = new IntersectionObserver((entries) => {\n" +
 "        entries.forEach(entry => {\n" +
 "            if (entry.isIntersecting) {\n" +
+"                entry.target.classList.add('visible');\n" +
 "                navLinks.forEach(link => {\n" +
-"                    link.classList.remove('bg-slate-800', 'text-teal-400');\n" +
+"                    link.classList.remove('bg-slate-800', 'text-teal-400', 'translate-x-2');\n" +
 "                    if (link.getAttribute('href') === '#' + entry.target.id) {\n" +
-"                        link.classList.add('bg-slate-800', 'text-teal-400');\n" +
+"                        link.classList.add('bg-slate-800', 'text-teal-400', 'translate-x-2');\n" +
 "                    }\n" +
 "                });\n" +
 "            }\n" +
 "        });\n" +
 "    }, observerOptions);\n\n" +
 "    sections.forEach(sec => observer.observe(sec));\n\n" +
+"    // Fallback visibility trigger\n" +
+"    setTimeout(() => {\n" +
+"        sections.forEach(sec => sec.classList.add('visible'));\n" +
+"    }, 800);\n\n" +
 "    // Smooth scroll for nav links\n" +
 "    navLinks.forEach(link => {\n" +
 "        link.addEventListener('click', (e) => {\n" +
@@ -97,7 +102,8 @@ const tsCode = "// @ts-nocheck\n" +
 "            const targetId = link.getAttribute('href').substring(1);\n" +
 "            const targetEl = document.getElementById(targetId);\n" +
 "            if(targetEl) {\n" +
-"                window.scrollTo({\n" +
+"                const scrollArea = document.getElementById('scroll-area');\n" +
+"                scrollArea.scrollTo({\n" +
 "                    top: targetEl.offsetTop - 80,\n" +
 "                    behavior: 'smooth'\n" +
 "                });\n" +
@@ -158,7 +164,7 @@ const htmlContent = `<!DOCTYPE html>
         </aside>
 
         <!-- Main Content -->
-        <main class="flex-1 h-full overflow-y-auto relative custom-scrollbar bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjMGYxNzJhIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMOCA4Wk04IDBMMCA4WiIgc3Ryb2tlPSIjMWUzYThhIiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')]">
+        <main id="scroll-area" class="flex-1 h-full overflow-y-auto relative custom-scrollbar animated-bg">
             <!-- Glass Overlay for Background -->
             <div class="absolute inset-0 bg-slate-900/90 pointer-events-none fixed"></div>
             
@@ -205,6 +211,30 @@ body {
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: rgba(45, 212, 191, 0.6); 
+}
+
+/* Animations & Dynamic UI */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-bg {
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #0f172a, #020617);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Enhancing Tailwind Typography for Dark Mode */
