@@ -2,92 +2,127 @@
   {
     "path": "charge-area.png",
     "name": "charge-area",
-    "title": "Electric Vehicle Charging Station Visual Interface",
+    "title": "Electric Vehicle Charging Station",
     "site_address": "/modules/ev-charging",
-    "role": "This visual interface allows for monitoring the status and management of electric vehicle charging stations integrated within the smart city network. The associated images are charge-area.png and charge(1).jpg through charge(5).jpg, which detail the charging area design and status."
+    "role": "Interface for monitoring and managing EV charging infrastructure."
+  },
+  {
+    "path": "charge(1).jpg",
+    "name": "charge-station-view",
+    "title": "Charging Station Details",
+    "site_address": "/modules/ev-charging",
+    "role": "Detailed view of EV charging station hardware and connectivity."
+  },
+  {
+    "path": "charge(2).jpg",
+    "name": "charge-station-view",
+    "title": "Charging Station Details",
+    "site_address": "/modules/ev-charging",
+    "role": "Detailed view of EV charging station hardware and connectivity."
+  },
+  {
+    "path": "charge(3).jpg",
+    "name": "charge-usage-stats",
+    "title": "Charging Usage Statistics",
+    "site_address": "/modules/ev-charging",
+    "role": "Dashboard showing real-time usage analytics of charging stations."
+  },
+  {
+    "path": "charge(4).jpg",
+    "name": "charge-billing-interface",
+    "title": "Billing System",
+    "site_address": "/modules/ev-charging",
+    "role": "Payment and invoicing interface for charging services."
+  },
+  {
+    "path": "charge(5).jpg",
+    "name": "charge-maintenance-alerts",
+    "title": "Maintenance Alerts",
+    "site_address": "/modules/ev-charging",
+    "role": "System status and maintenance alert monitoring interface."
   },
   {
     "path": "chatbot(1).png",
     "name": "chatbot",
-    "title": "Smart City AI Chatbot Assistant",
+    "title": "Smart City AI Assistant",
     "site_address": "/modules/chatbot",
-    "role": "This visual component is the main interface for the Smart City's AI chatbot assistant. It allows users to ask questions about city services, find directions, report issues, and access information. The full set of images (chatbot(1).png through chatbot(6).png) show different states of user interaction, help screens, and developer console views."
+    "role": "Interactive interface for the city's AI-powered service assistant."
   },
   {
     "path": "chatbot(2).png",
-    "name": "chatbot",
-    "title": "Smart City AI Chatbot Assistant",
+    "name": "chatbot-user-dialog",
+    "title": "Chatbot Conversation Flow",
     "site_address": "/modules/chatbot",
-    "role": "This visual component is the main interface for the Smart City's AI chatbot assistant. It allows users to ask questions about city services, find directions, report issues, and access information. The full set of images (chatbot(1).png through chatbot(6).png) show different states of user interaction, help screens, and developer console views."
+    "role": "Visual representation of user-bot interaction dialog."
   },
   {
     "path": "chatbot(3).png",
-    "name": "chatbot",
-    "title": "Smart City AI Chatbot Assistant",
+    "name": "chatbot-settings",
+    "title": "Chatbot Configuration",
     "site_address": "/modules/chatbot",
-    "role": "This visual component is the main interface for the Smart City's AI chatbot assistant. It allows users to ask questions about city services, find directions, report issues, and access information. The full set of images (chatbot(1).png through chatbot(6).png) show different states of user interaction, help screens, and developer console views."
-  },
-  {
-    "path": "chatbot(4).png",
-    "name": "chatbot",
-    "title": "Smart City AI Chatbot Assistant",
-    "site_address": "/modules/chatbot",
-    "role": "This visual component is the main interface for the Smart City's AI chatbot assistant. It allows users to ask questions about city services, find directions, report issues, and access information. The full set of images (chatbot(1).png through chatbot(6).png) show different states of user interaction, help screens, and developer console views."
-  },
-  {
-    "path": "chatbot(5).png",
-    "name": "chatbot",
-    "title": "Smart City AI Chatbot Assistant",
-    "site_address": "/modules/chatbot",
-    "role": "This visual component is the main interface for the Smart City's AI chatbot assistant. It allows users to ask questions about city services, find directions, report issues, and access information. The full set of images (chatbot(1).png through chatbot(6).png) show different states of user interaction, help screens, and developer console views."
+    "role": "Administrative settings and configuration panel for the bot."
   },
   {
     "path": "face-reg.png",
     "name": "facial-recognition",
-    "title": "Biometric Access Control and Security System",
+    "title": "Biometric Security System",
     "site_address": "/modules/facial-recognition",
-    "role": "This diagram illustrates the core components of the facial recognition system. It shows real-time face detection, data matching, and authorization processes used for secure access to city facilities and for general security monitoring."
+    "role": "System for real-time face detection and secure access control."
   },
   {
     "path": "indoor-localization.png",
     "name": "indoor-localization",
-    "title": "Conceptual Indoor Positioning System",
+    "title": "Indoor Positioning System",
     "site_address": "/modules/indoor-localization",
-    "role": "This image presents the conceptual design and setup for an indoor localization system. It features a grid of anchors to triangulate positions and mobile devices as target nodes, demonstrating the system's role in facilitating indoor navigation in complex buildings."
+    "role": "Technical visualization for indoor navigation and tracking."
   },
   {
     "path": "parking.jpg",
     "name": "parking",
-    "title": "Smart Parking Management System View",
+    "title": "Smart Parking Management",
     "site_address": "/modules/parking",
-    "role": "This image shows a visual map of the smart parking lot with real-time occupancy monitoring. Available spaces are highlighted in green, and occupied slots are shown in red, providing a visual guide for drivers and system administrators."
+    "role": "Real-time visual map for tracking parking space occupancy."
   },
   {
     "path": "simulator.jpg",
     "name": "simulator",
-    "title": "Autonomous Vehicle Driving Simulator",
+    "title": "Autonomous Driving Simulator",
     "site_address": "/modules/autonomous-driving-simulator",
-    "role": "This is a top-down view of the self-driving car simulator. It is a critical component of the transportation module, used to test autonomous algorithms, path planning, and obstacle avoidance within a controlled, simulated urban environment before deployment to real vehicles."
+    "role": "Simulation environment for testing autonomous vehicle algorithms."
   },
   {
     "path": "smart-city-poster.jpg",
     "name": "smart-city-poster",
-    "title": "Smart City Project Comprehensive Poster",
+    "title": "Project Overview Poster",
     "site_address": "/",
-    "role": "This comprehensive poster provides a high-level overview and promotional material for the entire Smart City project, summarizing all key modules and their integrated roles in creating a modern, intelligent urban environment."
+    "role": "Comprehensive promotional poster for the Smart City project."
+  },
+  {
+    "path": "voice-assistant(2).jpeg",
+    "name": "voice-assistant-config",
+    "title": "Voice Assistant Settings",
+    "site_address": "/modules/voice-assistant",
+    "role": "Configuration and calibration interface for voice recognition."
   },
   {
     "path": "voice-assistant(1).jpeg",
     "name": "voice-assistant",
-    "title": "Voice and Gesture Assistant Interface",
+    "title": "Voice and Gesture Assistant",
     "site_address": "/modules/voice-assistant",
-    "role": "This visual shows the conceptual interface for a voice-controlled assistant and gesture recognition system. The images voice-assistant(1).jpeg and voice-assistant(2).jpeg depict developer views of the interface, showcasing its core functionality for natural interaction with smart city services."
+    "role": "Interface for voice-based and gesture-controlled service interaction."
   },
   {
-    "path": "voice-assistant(2).jpeg",
-    "name": "voice-assistant",
-    "title": "Voice and Gesture Assistant Interface",
-    "site_address": "/modules/voice-assistant",
-    "role": "This visual shows the conceptual interface for a voice-controlled assistant and gesture recognition system. The images voice-assistant(1).jpeg and voice-assistant(2).jpeg depict developer views of the interface, showcasing its core functionality for natural interaction with smart city services."
+    "path": "home.jpg",
+    "name": "smart-home-dashboard",
+    "title": "Smart Home Hub",
+    "site_address": "/modules/home",
+    "role": "Central dashboard for managing smart home IoT devices."
+  },
+  {
+    "path": "home.png",
+    "name": "smart-home-dashboard",
+    "title": "Smart Home Hub",
+    "site_address": "/modules/home",
+    "role": "Central dashboard for managing smart home IoT devices."
   }
 ]
