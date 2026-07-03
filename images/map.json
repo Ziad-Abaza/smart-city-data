@@ -124,5 +124,12 @@
     "title": "Smart Home Hub",
     "site_address": "/modules/home",
     "role": "Central dashboard for managing smart home IoT devices."
+  },
+  {
+    "path": "smart-car.png",
+    "name": "smart-car",
+    "title": "Smart Car",
+    "site_address": "/modules/smart-car",
+    "role": "smart car image"
   }
 ]
