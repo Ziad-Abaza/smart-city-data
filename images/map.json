@@ -131,5 +131,54 @@
     "title": "Smart Car",
     "site_address": "/modules/smart-car",
     "role": "smart car image"
+  },
+  {
+    "path": "dr.osama(1).jpg",
+    "name": "Prof. Dr . Osama El-Nahhas",
+    "title": "Prof. Dr . Osama El-Nahhas",
+    "site_address": "/modules/dr.osama",
+    "role": "Prof. Dr . Osama El-Nahhas image"
+  },
+  {
+    "path": "dr.osama(2).jpg",
+    "name": "Prof. Dr . Osama El-Nahhas",
+    "title": "Prof. Dr . Osama El-Nahhas",
+    "site_address": "/modules/dr.osama",
+    "role": "Prof. Dr . Osama El-Nahhas image"
+  },
+  {
+    "path": "dr.osama(3).jpg",
+    "name": "Prof. Dr . Osama El-Nahhas",
+    "title": "Prof. Dr . Osama El-Nahhas",
+    "site_address": "/modules/dr.osama",
+    "role": "Prof. Dr . Osama El-Nahhas image"
+  },
+  {
+    "path": "eng.fayoumi(1).png",
+    "name": "Eng. Mohamed El-Fayoumi",
+    "title": "Eng. Mohamed El-Fayoumi",
+    "site_address": "/modules/dr.mohamed",
+    "role": "Eng. Mohamed El-Fayoumi image"
+  },
+  {
+    "path": "eng.fayoumi(2).png",
+    "name": "Eng. Mohamed El-Fayoumi",
+    "title": "Eng. Mohamed El-Fayoumi",
+    "site_address": "/modules/dr.mohamed",
+    "role": "Eng. Mohamed El-Fayoumi image"
+  },
+  {
+    "path": "eng.fayoumi(1).jpg",
+    "name": "Eng. Mohamed El-Fayoumi",
+    "title": "Eng. Mohamed El-Fayoumi",
+    "site_address": "/modules/dr.mohamed",
+    "role": "Eng. Mohamed El-Fayoumi image"
+  },
+  {
+    "path": "dr.El-Gohary.jpg",
+    "name": "Dr. Mohamed El-Gohary",
+    "title": "Dr. Mohamed El-Gohary",
+    "site_address": "/modules/dr.mohamed",
+    "role": "Dr. Mohamed El-Gohary image"
   }
 ]
