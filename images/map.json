@@ -100,16 +100,16 @@
   {
     "path": "voice-assistant(2).jpeg",
     "name": "voice-assistant-config",
-    "title": "Voice Assistant Settings",
+    "title": "Voice Assistant when THINKING",
     "site_address": "/modules/voice-assistant",
-    "role": "Configuration and calibration interface for voice recognition."
+    "role": "Voice assistant interface showing processing state during user interaction."
   },
   {
     "path": "voice-assistant(1).jpeg",
     "name": "voice-assistant",
-    "title": "Voice and Gesture Assistant",
+    "title": "Voice Assistant when LISTENING",
     "site_address": "/modules/voice-assistant",
-    "role": "Interface for voice-based and gesture-controlled service interaction."
+    "role": "Voice assistant interface showing active listening state."
   },
   {
     "path": "home.jpg",
