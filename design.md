@@ -10,7 +10,7 @@ The physical maquette serves as the definitive bridge between theoretical algori
 
 ### 9.2 Virtual Simulation and Digital Twin Environment
 
-Prior to physical fabrication, a comprehensive virtual simulation environment was engineered as a "digital twin" of the city. As depicted in `image_3eb05c.jpg`, this simulation features a high-fidelity urban layout, including precise road networks, standardized lane demarcations (solid and dashed), red intersection stop-markers, and a virtual vehicle agent. This digital counterpart provided a rigorous, risk-free environment for the preliminary validation of navigation algorithms before their deployment onto the physical hardware.
+Prior to physical fabrication, a comprehensive virtual simulation environment was engineered as a "digital twin" of the city. this simulation features a high-fidelity urban layout, including precise road networks, standardized lane demarcations (solid and dashed), red intersection stop-markers, and a virtual vehicle agent. This digital counterpart provided a rigorous, risk-free environment for the preliminary validation of navigation algorithms before their deployment onto the physical hardware.
 
 ### 9.3 Infrastructure and Base Substrate
 

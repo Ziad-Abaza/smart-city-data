@@ -86,9 +86,9 @@
   {
     "path": "simulator.jpg",
     "name": "simulator",
-    "title": "Autonomous Driving Simulator",
+    "title": "Virtual Simulation and Digital Twin Environment",
     "site_address": "/modules/autonomous-driving-simulator",
-    "role": "Simulation environment for testing autonomous vehicle algorithms."
+    "role": "comprehensive virtual simulation environment was engineered as a 'digital twin' of the city."
   },
   {
     "path": "smart-city-poster.jpg",
